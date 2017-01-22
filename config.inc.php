@@ -11,18 +11,18 @@ $i = 0;
 /* Server: rdsstrn [1] */
 $i++;
 $cfg['Servers'][$i]['verbose'] = 'rdsstrn';
-$cfg['Servers'][$i]['host'] = 'cmp3.c8ohkabmwm3n.us-east-1.rds.amazonaws.com';
+$cfg['Servers'][$i]['host'] = 'xxxx.xxxxxxxxxxx.us-east-1.rds.amazonaws.com';
 $cfg['Servers'][$i]['port'] = '';
 $cfg['Servers'][$i]['socket'] = '';
 $cfg['Servers'][$i]['connect_type'] = 'tcp';
 $cfg['Servers'][$i]['extension'] = 'mysqli';
 $cfg['Servers'][$i]['auth_type'] = 'cookie';
-$cfg['Servers'][$i]['user'] = 'root';
-$cfg['Servers'][$i]['password'] = '';
+$cfg['Servers'][$i]['user'] = 'xxxxx';
+$cfg['Servers'][$i]['password'] = 'xxxx';
 
 /* End of servers configuration */
 
-$cfg['blowfish_secret'] = '587a6029cb3617.60510124';
+$cfg['blowfish_secret'] = 'xxxxxxxxxxxxx';
 $cfg['UploadDir'] = '';
 $cfg['SaveDir'] = '';
 $cfg['DefaultLang'] = 'en';
