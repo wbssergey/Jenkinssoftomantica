@@ -1,0 +1,2 @@
+# Jenkinssoftomantica
+testing CI server
