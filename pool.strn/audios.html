@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+  <title></title> 
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta content="Sergey Zemtsov, zemtsov, Russia,Israel, Canada, szemtsov, poetry" name="keywords">
+<meta content="Sergey Zemtsov" name="author">
+<meta content="index,follow" name="robots">
+<link href="https://s3.amazonaws.com/cache.strn/trophies.css" rel="stylesheet">
+<script type='text/javascript' src='https://s3.amazonaws.com/cache.strn/jwplayer.flash.swf'></script>
+<script type='text/javascript' src='https://s3.amazonaws.com/cache.strn/jwplayer.js'></script>
+<script type='text/javascript' src='https://s3.amazonaws.com/cache.strn/jwkey.js'></script>
+</head>
+<body ng-app='Container1App'  ng-controller='Container1Ctrl' >
+ <input type="text" ng-model="color" placeholder="Enter a color"/>
+ <div  align="center"><font color="#2d394d">
+<center><a href="http://mp3.softomantica.com" target=_blank>Strangemic Resource Network</a></center>
+<center>bursts into Clouds now</center></font>
+</div>
+<table cellspacing="0" cellpadding="0" border="0" bgcolor="#2d394d" width="80%" align="center">
+<tbody><tr>
+<td></td><td colspan="2" valign="top"><div><h3>
+<input name="bhideadd" id="bhideadd" value="show disclaimer" onclick="return hideadd('');" type="button"><br>&nbsp;&nbsp;&nbsp;&nbsp;
+</h3></div><div id="disclaimer" style="display: none;"><h3>Disclaimer</h3>
+<p align="justify">
+This project is under construction and it has objectives:<Br>
+- to provide deployment of free content as well on demand monetized content ( so far free only);<Br>
+- never to hold copyright conflicts and all copyright claims are resolved as soon as received by our team; <Br>
+however we encourage copyright owners to be tolerant and think about open world with less obsession of possession;<Br>
+- to provide bookmarks and download links for any free published item;<Br>
+- to provide individual flexible administration of channels and play lists;<Br>
+- to provide individual hosts, partitions, regions, micro services;<Br>
+<Br>
+We will add more release notes soon.<Br>
+<Br>
+Founders of company have background in Russia,<Br> Softomantica Digital Media.
+<Br>
+2017-02-01<br>Toronto, Canada<Br>
+</p>
+<p align="justify">
+В настоящий момент статус системы Under Construction. Все web интерфейсы
+ являются экспериментальными и являются прототипами для коммерческого 
+дизайна с использованием cross browser compatibility standards, 
+различных вариантов dynamic web sites, продвинутых возможностей ajax. 
+Как Вы понимаете, подобный бизнес нуждается в инвестициях и требует 
+энтузиазма разработчиков. </p>
+<p>&nbsp;</p>
+<hr>
+<div>
+<center>
+Please send any copyright claims to this address
+<br>
+<a href="mailto:copyright@softomantica.ca"><font color="red">Copyright Claims</font></a>
+<br>
+<Br>
+All copyright strikes will be resolved as requestor wants it
+<br>
+</center>
+<hr>
+</div></div></td><td colspan="1" valign="top" nowrap="nowrap">
+<div id="mlib" style="display:none;"><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+<p align="center">
+<table width="100%"><tbody><tr><td title="it's only rock'n'roll if you like it please support site development" nowrap="nowrap" align="right">
+<img alt="demo statistics" src="https://s3.amazonaws.com/cache.strn/mp3stat.jpg">
+</td></tr>
+</tbody></table>
+</p>
+<p align="justify"> </p><div width="100%">
+<table width="100%"><tbody><tr><td title="I’m blown away whenever I receive a donation, yes it is!" nowrap="nowrap" align="right">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input name="cmd" value="_s-xclick" type="hidden">
+<input name="hosted_button_id" value="YVTX6KPWKEVJL" type="hidden">
+<input name="donatesubmit" value="donate" type="submit">
+</form>
+</td></tr>
+<tr><td title="it's only rock'n'roll if you like it please support site development" nowrap="nowrap">&nbsp;</td></tr>
+</tbody></table></div>
+<p></p>	
+</div>
+</td>
+</tr>
+<tr><td width="20px" valign="top" nowrap="nowrap">&nbsp;</td>
+<td width="60%" valign="top">
+ <hr width="75%" noshade="noshade" align="left">
+<p>{{albumtitle}}</p> 
+ <hr width="75%" noshade="noshade" align="left">
+<img  src="{{srcimage}}"><p></p>
+<form name="fSubmit" method="post" action="">
+<table width="100%"><tbody><tr><td width="100%" nowrap="nowrap">
+<input value="clear all" name="bcl" id="bcl" onclick="return dosubmit('cl');" type="button">&nbsp;&nbsp;
+<input value="check all" name="bch" id="bch" onclick="return dosubmit('ch');" type="button">&nbsp;&nbsp;
+<br><br>
+<table><tbody><tr><td align="center">Track</td><td align="center">Clone</td><td nowrap="nowrap" align="right">
+</td><td></td></tr>
+ <tr ng-repeat="x in records">
+<td title="if track is temporary locked - download with Right M Click">
+<input  ng-model="records[$index].trackid" ng-checked="x.checked" ng-true-value="1" ng-false-value="" name="s{{x.trackid}}" id="s{{$index+1}}" ng-change="records[$index].trackid.myClick(records[$index].trackid)" type="checkbox">
+<a href="{{x.bucket}}{{x.directory}}/{{x.trackname}}" target="_blank">&nbsp;{{x.title}}</a>
+<td><a href="{{x.bucket}}audios.html?gsi={{x.gsi}}" target="_blank" >&nbsp;{{x.gsi}}</a></td><td align="right">&nbsp;<font color="green"></font>&nbsp;</td><td nowrap="nowrap"><span ng-if="x.ytb!=null">
+<a href="{{x.ytb}}" target='_blank' >&nbsp;ytb</a></span></td>
+</tr>
+<tr><td>
+</td></tr>
+</tbody>
+</table>
+<input value="1" name="hideadd" id="hideadd" type="hidden">
+<input value="0" name="pl" id="pl" type="hidden">
+<p></p>  
+<input value="select tracks to play" name="bpl" id="bpl" onclick="return dosubmit('pl');" type="button">&nbsp;&nbsp; 
+&nbsp;&nbsp;
+</td></tr></tbody></table>
+<table><tbody><tr><td></td></tr>
+<tr><td> 
+<div id="myaudio"></div>
+</td></tr>
+</tbody>
+</table>
+  <hr width="100%" noshade="noshade">
+</form></td></tr></tbody>
+</table>
+<script type="text/javascript" src="https://s3.amazonaws.com/cache.strn/mp3template40strn.js"></script>
+
+<script type="text/javascript" src="https://s3.amazonaws.com/cache.strn/angular.min.js"></script>
+ <script type="text/javascript" src="https://s3.amazonaws.com/cache.strn/mp3angular40strn.js"></script>
+
+</body>
+</html>
+

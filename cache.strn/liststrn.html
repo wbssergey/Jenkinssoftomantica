@@ -1,0 +1,52 @@
+<!doctype html>
+<html ng-app="strn-s3-view">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <meta charset="utf-8">
+   <title>S3 View</title>
+  <meta name="description" content="">
+       
+<link href="https://s3.amazonaws.com/cache.strn/trophies.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+   <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.20.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+  <script src="https://s3.amazonaws.com/cache.strn/sdk1.js"></script>   
+</head>
+<body ng-controller="ViewController" style="FONT-SIZE: 12px; COLOR: black; FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica; BACKGROUND-COLOR:  #cbcbcb; ">
+
+<div align="center"><font color="#2d394d">
+<center>Strangemic Resource Network</center>
+</font>
+</div>
+  <table cellspacing="0" cellpadding="0" border="0" bgcolor="#2d394d" width="80%" align="center">
+<tbody>
+<tr ><td nowrap height=50px> </td></tr>
+<tr><td nowrap>
+<div>
+             <span>Passphrase</span>
+<input ng-model="creds.passphrase" type="password" class="form-control" placeholder="my_passhrase">
+</div>
+</td></tr>
+<tr><td nowrap><Br><br>
+              <div >
+              <span>Bucket</span>
+            
+              <input ng-model="creds.bucket" type="text" class="form-control" placeholder="my_bucket">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input value="ListObjects" name="list-button" id="list-button"  type="button" ng-click='list();'>
+     
+            </div>
+    </td></tr>
+<tr ><td nowrap  height=50px> </td></tr>
+
+<tr><td nowrap>
+
+       <div  style="margin-left:45px; width:100%;" id="results"></div>
+  </td></tr>
+    
+</tbody>
+</table>       
+</body>
+</html>

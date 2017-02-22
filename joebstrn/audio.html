@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<HTML  ng-app='Container1App'  ng-controller='Container1Ctrl'>
+<head  >
+  <title >{{org}}</title> 
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta content="Sergey Zemtsov, zemtsov, Russia,Israel, Canada, szemtsov, poetry" name="keywords">
+<meta content="Sergey Zemtsov" name="author">
+<meta content="index,follow" name="robots">
+       
+<link href="https://s3.amazonaws.com/cache.strn/trophies.css" rel="stylesheet">
+
+<style>
+.styled-select select {
+   background: #990000; 
+   width: 45px;
+   padding: 1px;
+   font-size: 12px;
+   color: #ffffcc;
+   border: 1px; solid #ffffcc;
+   height: 20px;
+}
+</style> 
+
+  
+ <script type='text/javascript' src='https://s3.amazonaws.com/cache.strn/jwplayer.js'></script>
+<script type='text/javascript' src='https://s3.amazonaws.com/cache.strn/jwplayer.flash.swf'></script>
+<script type='text/javascript' src='https://s3.amazonaws.com/cache.strn/jwkey.js'></script>
+</head>
+<body>
+<div align="center"><font color="#2d394d">
+<center>Strangemic Resource Network</center>
+<center>bursts into Amazon Cloud</center></font>
+</div>
+  <table cellspacing="0" cellpadding="0" border="0" bgcolor="#2d394d" width="80%" align="center">
+<tbody><tr>
+<td></td><td colspan="2" valign="top"><div><h3>
+<input name="bhideadd" id="bhideadd" value="show disclaimer" onclick="return hideadd('');" type="button"><br>&nbsp;&nbsp;&nbsp;&nbsp;
+</h3></div><div id="disclaimer" style="display: none;"><h3>Disclaimer</h3>
+<p align="justify">
+Strangemic Resource Network MP3 Browser является индивидуально 
+настраиваемой CMS ( content management system), которая не требует 
+дорогого хостинга. В данном случае, плата за хостинг $7 в месяц. Тем не 
+менее предполагается, что провайдер хостинга обеспечивает достаточный 
+bandwidth для работы системы в режиме “радио”. В противном, всегда можно
+ скачать любой трек на локальный компьютер и слушать его у себя. В 
+перспективе, setup процесс сканирует FTP каталог на сервере провайдера и
+ строит сайт, подобный тому, что Вы наблюдаете, но наполненный Вашим 
+избранным содержанием, будь то, классика, джаз, аудиокниги.</p>
+<p align="justify">
+	Далее, внутри системы встроен audit посещений Вашего сайта, можно 
+изучать спрос на некоторые Ваши индивидуальные ценности, получая 
+счетчики кликов по странам, городам, Вашим зарегистрированным 
+пользователям и IP адресам. Регистрация пользователей и настройка 
+пользователей в Strangemic Resource Network MP3 Browser сопряжена с 
+другой популярной “семантической” CMS – WordPress, что позволяет 
+использовать все ресурсы разработки и plugins WordPress. В частности, 
+регистрация на портале blog.szemtsov.com, обеспечивает "паспорт" для 
+входа на все прочие ресурсы Strangemic Resource Network.</p>
+<p align="justify">
+В настоящий момент статус системы Under Construction. Все web интерфейсы
+ являются экспериментальными и являются прототипами для коммерческого 
+дизайна с использованием cross browser compatibility standards, 
+различных вариантов dynamic web sites, продвинутых возможностей ajax. 
+Как Вы понимаете, подобный бизнес нуждается в инвестициях и требует 
+энтузиазма разработчиков. </p>
+
+<p>
+	&nbsp;</p>
+<hr>
+<div>
+<center>
+Please send any copyright claims to this address
+<br>
+<a href="mailto:szemtsov@bell.net"><font color="red">Copyright Claims</font></a>
+<br>
+All copyright strikes will be resolved
+<br>
+</center>
+<hr>
+</div></div></td><td colspan="1" valign="top" nowrap="nowrap">
+<div id="mlib" style="display: none;"><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+	
+<p align="center">
+<table width="100%"><tbody><tr><td title="it's only rock'n'roll if you like it please support site development" nowrap="nowrap" align="right">
+<img alt="demo statistics" src="mp3stat.jpg">
+</td></tr>
+</tbody></table>
+</p>
+<p align="justify"> </p><div width="100%">
+<table width="100%"><tbody><tr><td title="I’m blown away whenever I receive a donation, yes it is!" nowrap="nowrap" align="right">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input name="cmd" value="_s-xclick" type="hidden">
+<input name="hosted_button_id" value="YVTX6KPWKEVJL" type="hidden">
+<input name="donatesubmit" value="donate" type="submit">
+</form>
+</td></tr>
+<tr><td title="it's only rock'n'roll if you like it please support site development" nowrap="nowrap">&nbsp;</td></tr>
+</tbody></table></div>
+<p></p>	
+</div>
+</td>
+</tr>
+<tr><td width="20px" valign="top" nowrap="nowrap">&nbsp;</td>
+<td width="60%" valign="top">
+ <hr width="75%" noshade="noshade" align="left">
+
+<p>{{albumtitle}}</p> 
+ <hr width="75%" noshade="noshade" align="left">
+<img  src="{{srcimage}}"><p></p>
+<form name="fSubmit" method="post" action="">
+<table width="100%"><tbody><tr><td width="100%" nowrap="nowrap">
+<input value="clear all" name="bcl" id="bcl" onclick="return dosubmit('cl');" type="button">&nbsp;&nbsp;
+<input value="check all" name="bch" id="bch" onclick="return dosubmit('ch');" type="button">&nbsp;&nbsp;
+<br><br>
+<table><tbody><tr><td align="center">Track</td><td align="center"></td><td nowrap="nowrap" align="right"></td><td></td></tr>
+
+ <tr ng-repeat="x in records">
+<td title="if track is temporary locked - download with Right M Click">
+<input value="1" name="s{{x.trackid}}" id="s{{x.trackid}}" checked="checked" type="checkbox">
+<a href="{{x.bucket}}{{x.directory}}/{{x.trackname}}" target="_blank">&nbsp;{{x.title}}</a>
+<td></td><td align="right">&nbsp;<font color="green"></font>&nbsp;</td><td nowrap="nowrap"></td>
+
+    </tr>
+</tbody></table>
+<input value="1" name="hideadd" id="hideadd" type="hidden">
+<input value="0" name="pl" id="pl" type="hidden">
+
+<p></p>  
+
+<input value="select tracks to play" name="bpl" id="bpl" onclick="return dosubmit('pl');" type="button">&nbsp;&nbsp; 
+&nbsp;&nbsp;
+</td></tr></tbody></table>
+<table><tbody><tr><td></td></tr><tr><td> 
+
+<div id="myaudio" >
+&nbsp;</div></td></tr>
+</tbody>
+</table>
+<script type="text/javascript" src="mp3template.js"></script>
+  <hr width="100%" noshade="noshade">
+</form></td></tr></tbody>
+</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+ <script src="mp3angular1strn.js"></script>
+  
+
+</body></html>

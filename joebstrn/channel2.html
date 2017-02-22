@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+  <title>Strangemic Resource Network Video</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><link href="https://s3.amazonaws.com/joebstrn/trophies.css" rel="stylesheet">
+ 
+ <script type='text/javascript' src='https://s3.amazonaws.com/joebstrn/jwplayer.js'></script>
+<script type='text/javascript' src='https://s3.amazonaws.com/joebstrn/jwplayer.flash.swf'></script>
+<script type='text/javascript' src='https://s3.amazonaws.com/joebstrn/jwkey.js'></script>
+<script type='text/javascript' src='https://s3.amazonaws.com/joebstrn/chcontainer2.js'></script>
+</head>
+<body  ng-controller="ChannelCtrl" style="FONT-SIZE: 14px; COLOR: black; FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica; BACKGROUND-COLOR:  #2d394d; ">
+ <center><div id="idstrnpagetitle"></div>
+<HR width="60%">
+<Table width=100% align=center><tr><td nowrap valign=center>
+<div align=left>
+<input type=button value="skip" title='skip current item'   name="skip" id="skip" onclick="skip(1)">
+</div>
+</td>
+<td nowrap valign=center><center>
+<div align=center id="my-video"></div></center></td>
+<td nowrap valign=center><div align=right><input type=button value="next" title='select next playlist'  name="next" id="next" onclick="mclick(1)"></div>
+</td>
+<td nowrap valign=center><div align=right><input type=button value="away" title='skip current play list'   name="away" id="away" onclick="skip(10)"></div>
+</td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" bgcolor="#2d394d" width="100%" align="center">
+<tbody><tr><td valign=center nowrap width="80%" >
+</td></tr>
+<tr><td nowrap width="100%"><div><input name="bhideadd" id="bhideadd" value="show setup" onclick="return hideadd('');" type="button">
+</div></td></tr>
+<tr><td nowrap>
+<input value="1" name="hideadd" id="hideadd" type="hidden">
+<div id="setup" style="display:none;">
+<div>Setup</div>
+<hr>
+<center>
+<div><input type=button value="prior"  title='select prior playlist' name="prior" id="prior" onclick="mclick(-1)">
+&nbsp;&nbsp;&nbsp;&nbsp;Preview:&nbsp;&nbsp;
+<input type=checkbox value="1" name="checkp" id="checkp" 
+title='play first 40 seconds and switch to next item' >
+&nbsp;&nbsp;&nbsp;&nbsp;Auto:&nbsp;&nbsp;
+<input type=checkbox value="1" name="checka" checked id="checka" title='switch to next playlist automatically'  >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=button value="resize" name="resize" id="resize" onclick="resize()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type=button value="reload" name="reload" id="reload" onclick="mclick(1000);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div><hr>
+<div align=center name=download id=download></div>
+</center>
+</div>
+</td><td valign=center nowrap width="80%">
+<div><h3>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+</h3>
+</div>
+</td></tr>
+<tr><td nowrap><H1>Strangemic Resource Network, 2009</H1><hr></td></tr>
+</tbody></table>
+
+</center>
+<script src="channel.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-touch.min.js"></script>
+    
+    <script src="https://s3.amazonaws.com/joebstrn/dist/angular-carousel.min.js"></script>
+    <script>
+        angular.module('ChannelStrn1App', [
+            'angular-carousel'
+        ])
+
+        .controller('ChannelCtrl', function($scope) {
+
+
+            function getSlide(target, style) {
+                var i = target.length;
+                return {
+                    id: (i+0) ,
+                    label: 'slide #' + (i+0),
+                    img: 'http://proxy.softomantica.org:9090/channel/images/' + (i+0) +'.png' ,
+                    odd: (i % 2 === 0)
+                };
+            }
+
+
+            $scope.itemIndex = 1;
+           
+               
+        });
+
+
+    </script>
+</body>
+</HTML>
+
